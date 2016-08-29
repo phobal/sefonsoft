@@ -20,24 +20,42 @@ const Sefon = {
 	 * @param  {[type]} ch需要判断的字符 [description]
 	 * @return {[type]} true/false   [description]
 	 */
-	isChese: fucntion(ch) {
+	isChese: function(ch) {
 		return /^[\u4E00-\u9FA5]+$/.test(ch);
 	},
 
 	/**
-	 * 获取字符串的真是长度，汉字长度为2，英文长度为1
+	 * 获取字符串的真实长度，汉字长度为2，英文长度为1
 	 * @param  {[type]} str [description]
 	 * @return {[type]}     [description]
 	 */
-	getStrLen: fucntion(str) {
+	getStrLen: function(str) {
 		let len = 0;
 		for (var i = str.length - 1; i >= 0; i--) {
 			len += isChinese(str[i]) ? 2 : 1;
 		}
 		return len;
 	},
-	extend: fucntion(dst, ...src) {
+	/**
+	 * 对象扩展
+	 * @param  {[type]}    目标对象 [description]
+	 * @param  {...[type]} 源对象 [description]
+	 * @return {[type]}   扩展后的最新对象     [description]
+	 */
+	extend: function(dst, ...src) {
 
+	},
+	/**
+	 * 生成一个guid
+	 * @return {[type]} [description]
+	 */
+	guid: function() {
+		let f = () => {
+			return Math.floor((1 + Math.random()) * 0x10000)
+				.toString(16)
+				.substring(1);
+		}
+		return [`${f()}${f()}`, `${f()}`, `${f()}`, `${f()}`, `${f()}${f()}${f()}`].join('-');
 	}
 };
 
