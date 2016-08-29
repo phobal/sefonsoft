@@ -1,0 +1,16 @@
+{
+  "name": "sefon",
+  "version": "1.0.0",
+  "description": "sefonsoft js lib",
+  "main": "sefon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "patrick",
+  "license": "ISC",
+  "dependencies": {
+    "es6-promise": "^3.2.1",
+    "fetch": "^1.1.0",
+    "whatwg-fetch": "^1.0.0"
+  }
+}
